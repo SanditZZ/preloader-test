@@ -115,14 +115,20 @@ select {
   height: 100%;
   overflow: hidden;
   background: #FBCACB url('./assets/loading.webp')no-repeat center center;
-  background-size: 500px;
+  background-size: 350px;
+}
+
+@media (min-width: 768px) {
+  .js div#preloader {
+    background-size: 500px;
+  }
 }
 
 #preloader h1 {
   display: flex;
   justify-content: center;
   margin: auto;
-  padding: 70vh 15px;
+  padding: 75vh 15px;
   -webkit-user-select: none;
   user-select: none;
 }
