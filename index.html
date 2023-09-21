@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preloader Test</title>
+  <link rel="icon" type="image/x-icon" href="./favicon.ico">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script>
+    document.documentElement.classList.add("js");
+    jQuery(document).ready(function ($) {
+      setTimeout(function () {
+        $('#preloader').fadeOut('slow', function () {
+          $(this).remove();
+        });
+      }, 2000); // set the time here
+    });
+  </script>
+</head>
+
+<body>
+
+  <div id="preloader">
+    <h1>Now Loading...</h1>
+  </div>
+
+  <main class="main">
+    <h1>Preloader Test</h1>
+  </main>
+
+  <div class="placeholder">
+    <img src="./assets/placeholder-img.jpg" alt="sample">
+  </div>
+</body>
+
+</html>
