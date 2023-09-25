@@ -8,6 +8,8 @@
   <link rel="icon" type="image/x-icon" href="./favicon.ico">
   <link rel="stylesheet" href="styles.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/js-circle-progress/dist/circle-progress.min.js" type="module"></script>
+
   <script>
     document.documentElement.classList.add("js");
     jQuery(document).ready(function ($) {
@@ -23,6 +25,9 @@
 <body>
 
   <div id="preloader">
+    <circle-progress value="100" max="100" start-angle="0" animation="easeInOutCubic"
+      animation-duration="4500"></circle-progress> <!-- set animation duration here -->
+    <img src="./assets/loading.gif" alt="preloader sushi">
     <h1>Now Loading...</h1>
   </div>
 
