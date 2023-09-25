@@ -13,11 +13,18 @@
   <script>
     document.documentElement.classList.add("js");
     jQuery(document).ready(function ($) {
+      var preloader = $('#preloader');
+      var startTime = Date.now();
+      var preloaderTimeout = 5000; // Change the timeout here
+
       setTimeout(function () {
-        $('#preloader').fadeOut('slow', function () {
+        preloader.fadeOut('slow', function () {
           $(this).remove();
         });
-      }, 5000); // set the time here
+
+        var animationDuration = preloaderTimeout;
+        $('circle-progress').attr('animation-duration', animationDuration);
+      }, preloaderTimeout);
     });
   </script>
 </head>
@@ -26,7 +33,7 @@
 
   <div id="preloader">
     <circle-progress value="100" max="100" start-angle="0" animation="easeInOutCubic"
-      animation-duration="4500"></circle-progress> <!-- set animation duration here -->
+      animation-duration="5000"></circle-progress> <!-- set animation duration here -->
     <img src="./assets/loading.gif" alt="preloader sushi">
     <h1>Now Loading...</h1>
   </div>
